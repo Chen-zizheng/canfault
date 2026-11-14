@@ -2,7 +2,7 @@
 
 一个能在 WSL 里 5 分钟跑起来的迷你测试工具：往 vcan 虚拟总线上灌报文，看被测 ECU 多久崩、崩在哪一条报文上，然后把那条报文缩到最短。
 
-不是演示截图，仓库里 26 条 pytest 全绿，下面的数字都是在这台机器上真跑出来的。
+26 条 pytest 全绿。下面的数字在这台机器上跑出来：WSL2 Ubuntu、vcan0、Python 3.14 + python-can 4.6.1、pytest 9.0.2。
 
 ```
 canfault faults   按 6 类故障依次注入，看 DUT 的反应
