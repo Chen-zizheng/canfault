@@ -3,6 +3,8 @@ import pytest
 
 from canfault.frame import Frame, FrameError, pack_u16, set_nibble, unpack_u16
 
+pytestmark = pytest.mark.smoke
+
 
 def test_frame_rejects_oversized_payload():
     with pytest.raises(FrameError):

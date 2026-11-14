@@ -2,7 +2,10 @@
 import pytest
 
 from canfault.ecu import nominal_frames
+
 from canfault.faults import FAULT_KINDS, FaultPlan, fault_report, inject
+
+pytestmark = pytest.mark.smoke
 
 SEEDS = list(nominal_frames())
 

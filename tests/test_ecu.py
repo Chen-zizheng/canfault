@@ -3,6 +3,8 @@ import pytest
 
 from canfault.ecu import EcuSim, FrameError, nominal_frames
 
+pytestmark = pytest.mark.smoke
+
 
 class _Msg:
     def __init__(self, arbitration_id, data):

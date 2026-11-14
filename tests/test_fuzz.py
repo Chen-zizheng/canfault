@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 import random
 
+import pytest
+
 from canfault.ecu import EcuSim, nominal_frames
 from canfault.fuzz import mutate, minimize, run_fuzz
 from canfault.report import render_markdown
 
 SEEDS = list(nominal_frames())
+
+pytestmark = pytest.mark.regression
 
 
 def test_mutate_stays_within_limits():
